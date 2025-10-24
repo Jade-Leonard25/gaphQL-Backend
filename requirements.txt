@@ -13,6 +13,7 @@ idna==3.10
 Jinja2==3.1.6              # Required if you render any HTML or emails (FastAPI utility)
 MarkupSafe==3.0.2          # Jinja2 dependency
 passlib==1.7.4             # Password hashing
+bcrypt==4.1.3
 psycopg2-binary==2.9.10    # PostgreSQL driver (good fallback)
 pydantic==2.11.7           # Data validation (core FastAPI)
 pydantic-settings==2.10.1  # For configuration management
