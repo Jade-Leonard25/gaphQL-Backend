@@ -1,12 +1,10 @@
 from fastapi import FastAPI
 from db.db import Base, engine
-from controllers import user
+from controllers import user, chat, content
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
 origins = ["*"]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -20,6 +18,8 @@ def on_startup():
     Base.metadata.create_all(bind=engine)
 
 app.include_router(user.router)
+app.include_router(chat.router)
+app.include_router(content.router)
 
 @app.get("/")
 def read_root():
