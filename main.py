@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import *
 from db.db import Base, engine
 from controllers import user, chat, content
 from fastapi.middleware.cors import CORSMiddleware

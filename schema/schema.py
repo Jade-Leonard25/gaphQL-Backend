@@ -7,7 +7,7 @@ from typing import Optional
 # SQLAlchemy Model
 class DBUser(Base):
     __tablename__ = "users"
-
+    
     id = Column(Integer, primary_key=True, index=True)
     firstname = Column(String, index=True)
     lastname = Column(String, index=True)

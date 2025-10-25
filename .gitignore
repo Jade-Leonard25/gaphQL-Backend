@@ -3,4 +3,5 @@
 .vscode
 __pycache__
 __cache__
+config.toml
 configuration
