@@ -34,14 +34,18 @@ jobs:
       
       # 3. Build the Docker Image
       # The build uses your existing Dockerfile (now with Alpine!)
+     # ...
+     # ...
+    # 3. Build the Docker Image
+      # The build uses your existing Dockerfile (now with Alpine!)
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tag }}
+          tags:
+            - ${{ env.IMAGE_NAME }}:latest
+            - ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tag }}
             
       # 4. Optional: Deployment Step (Example Placeholder)
       # This step would typically trigger your production server (e.g., Kubernetes, EC2) 
