@@ -9,7 +9,7 @@ jobs:
   build-and-push:
     # Use an Ubuntu environment to run the steps
     runs-on: ubuntu-latest
-    
+
     # Define environment variables for the job
     env:
       REGISTRY: docker.io
@@ -40,8 +40,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:latest # Tag with 'latest'
-            ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tag }} # Tag with a unique commit hash
+            ${{ env.IMAGE_NAME }}:latest 
+            ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tag }} 
             
       # 4. Optional: Deployment Step (Example Placeholder)
       # This step would typically trigger your production server (e.g., Kubernetes, EC2) 
