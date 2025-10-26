@@ -40,8 +40,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:latest 
-            ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tag }} 
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tag }}
             
       # 4. Optional: Deployment Step (Example Placeholder)
       # This step would typically trigger your production server (e.g., Kubernetes, EC2) 
