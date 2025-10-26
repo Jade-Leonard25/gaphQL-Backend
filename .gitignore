@@ -1,7 +1,17 @@
-.env
-.venv
-.vscode
-__pycache__
-__cache__
-config.toml
-configuration
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+
+# VSCode
+.vscode/
